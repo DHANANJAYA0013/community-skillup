@@ -20,10 +20,10 @@ const benefits = [
 ];
 
 const stats = [
-  { value: "2,500+", label: "Active Mentors" },
-  { value: "15,000+", label: "Sessions Done" },
-  { value: "50+", label: "Skill Categories" },
-  { value: "4.8★", label: "Avg Rating" },
+  { value: "25+", label: "Active Mentors" },
+  { value: "15+", label: "Sessions Done" },
+  { value: "20+", label: "Skill Categories" },
+  { value: "4.1★", label: "Avg Rating" },
 ];
 
 const LandingPage = () => {
@@ -177,7 +177,7 @@ const LandingPage = () => {
                 </Button>
               </Link>
               <Link to="/signup">
-                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-foreground hover:bg-primary-foreground/10">
                   Become a Mentor
                 </Button>
               </Link>

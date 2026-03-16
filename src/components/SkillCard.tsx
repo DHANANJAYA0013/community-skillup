@@ -42,7 +42,7 @@ const SkillCard = ({ skill }: SkillCardProps) => {
               <span className="text-xs">{skill.studentsEnrolled}</span>
             </div>
           </div>
-          <span className="font-semibold text-foreground">${skill.price}<span className="text-xs text-muted-foreground font-normal">/hr</span></span>
+          <span className="font-semibold text-foreground">₹{skill.price}<span className="text-xs text-muted-foreground font-normal">/hr</span></span>
         </div>
       </div>
     </div>

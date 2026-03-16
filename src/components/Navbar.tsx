@@ -46,12 +46,12 @@ const Navbar = () => {
           {/* Right side */}
           <div className="hidden md:flex items-center gap-3">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              {/* <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <input
                 type="text"
                 placeholder="Search skills, mentors..."
                 className="pl-9 pr-4 py-2 text-sm rounded-lg bg-muted border-none outline-none focus:ring-2 focus:ring-primary/20 w-56 text-foreground placeholder:text-muted-foreground"
-              />
+              /> */}
             </div>
             <button className="relative p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
               <Bell className="w-5 h-5" />

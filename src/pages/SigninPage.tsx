@@ -57,7 +57,7 @@ const SigninPage = () => {
               <a href="#" className="text-sm text-primary hover:underline">Forgot password?</a>
             </div>
             <Button type="submit" className="w-full gradient-primary text-primary-foreground border-0 hover:opacity-90">
-              Sign In
+              <Link to="/teacher-dashboard">Sign in</Link>
             </Button>
           </form>
           <p className="text-sm text-center text-muted-foreground">

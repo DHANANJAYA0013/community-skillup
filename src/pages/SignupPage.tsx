@@ -79,7 +79,7 @@ const SignupPage = () => {
               </div>
             </div>
             <Button type="submit" className="w-full gradient-primary text-primary-foreground border-0 hover:opacity-90">
-              Create Account
+              <Link to="/admin-dashboard">Create Account</Link>
             </Button>
           </form>
 

@@ -45,7 +45,7 @@ const MentorCard = ({ mentor }: MentorCardProps) => {
             <span className="text-xs text-muted-foreground">({mentor.reviewCount})</span>
           </div>
           <div className="text-sm">
-            <span className="font-semibold text-foreground">${mentor.pricePerSession}</span>
+            <span className="font-semibold text-foreground">₹{mentor.pricePerSession}</span>
             <span className="text-muted-foreground">/session</span>
           </div>
         </div>
