@@ -13,6 +13,8 @@ const navLinks = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const isProfile = location.pathname.startsWith("/profile");
+  const isNotifications = location.pathname.startsWith("/notifications");
 
   return (
     <nav className="sticky top-0 z-50 glass border-b border-border/50">
@@ -53,10 +55,29 @@ const Navbar = () => {
                 className="pl-9 pr-4 py-2 text-sm rounded-lg bg-muted border-none outline-none focus:ring-2 focus:ring-primary/20 w-56 text-foreground placeholder:text-muted-foreground"
               /> */}
             </div>
-            <button className="relative p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
+            <Link
+              to="/notifications"
+              className={`relative p-2 rounded-lg transition-colors ${
+                isNotifications
+                  ? "bg-primary/10 text-primary"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+              }`}
+              aria-label="Notifications"
+            >
               <Bell className="w-5 h-5" />
               <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-accent" />
-            </button>
+            </Link>
+            <Link to="/profile" className="flex items-center" aria-label="Profile">
+              <Avatar
+                className={`h-10 w-10 border ${isProfile ? "border-primary ring-2 ring-primary/30" : "border-transparent"}`}
+              >
+                <AvatarImage
+                  src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=200&q=80"
+                  alt="Profile"
+                />
+                <AvatarFallback>DH</AvatarFallback>
+              </Avatar>
+            </Link>
             <Link to="/signin">
               <Button variant="ghost" size="sm">Sign In</Button>
             </Link>
@@ -91,6 +112,41 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <Link
+            to="/notifications"
+            onClick={() => setMobileOpen(false)}
+            className={`flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium ${
+              isNotifications ? "bg-primary/10 text-primary" : "text-foreground hover:bg-muted"
+            }`}
+          >
+            <div className="relative p-2 rounded-lg bg-muted">
+              <Bell className="w-4 h-4" />
+              <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-accent" />
+            </div>
+            <div className="flex flex-col">
+              <span>Notifications</span>
+              <span className="text-xs text-muted-foreground">Session updates</span>
+            </div>
+          </Link>
+          <Link
+            to="/profile"
+            onClick={() => setMobileOpen(false)}
+            className={`flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium ${
+              isProfile ? "bg-primary/10 text-primary" : "text-foreground hover:bg-muted"
+            }`}
+          >
+            <Avatar className="h-9 w-9 border border-border">
+              <AvatarImage
+                src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=200&q=80"
+                alt="Profile"
+              />
+              <AvatarFallback>DH</AvatarFallback>
+            </Avatar>
+            <div className="flex flex-col">
+              <span>Profile</span>
+              <span className="text-xs text-muted-foreground">View and update</span>
+            </div>
+          </Link>
           <div className="pt-2 flex gap-2">
             <Link to="/signin" className="flex-1"><Button variant="outline" className="w-full" size="sm">Sign In</Button></Link>
             <Link to="/signup" className="flex-1"><Button className="w-full gradient-primary text-primary-foreground border-0" size="sm">Get Started</Button></Link>

@@ -31,9 +31,14 @@ const SigninPage = () => {
             </div>
             <span className="text-lg font-bold text-foreground">SkillBridge</span>
           </div>
-          <div>
-            <h1 className="text-2xl font-bold text-foreground">Sign in</h1>
-            <p className="text-muted-foreground mt-1">Enter your credentials to continue</p>
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <h1 className="text-2xl font-bold text-foreground">Sign in</h1>
+              <p className="text-muted-foreground mt-1">Enter your credentials to continue</p>
+            </div>
+            <Link to="/">
+              <Button variant="ghost" size="sm">Back to Home</Button>
+            </Link>
           </div>
           <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
             <div>
@@ -56,9 +61,10 @@ const SigninPage = () => {
               </label>
               <a href="#" className="text-sm text-primary hover:underline">Forgot password?</a>
             </div>
+            <Link to="/teacher-dashboard">
             <Button type="submit" className="w-full gradient-primary text-primary-foreground border-0 hover:opacity-90">
-              <Link to="/teacher-dashboard">Sign in</Link>
-            </Button>
+              Sign in
+            </Button></Link>
           </form>
           <p className="text-sm text-center text-muted-foreground">
             Don't have an account?{" "}

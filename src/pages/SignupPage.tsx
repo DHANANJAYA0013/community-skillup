@@ -35,9 +35,14 @@ const SignupPage = () => {
             <span className="text-lg font-bold text-foreground">SkillBridge</span>
           </div>
 
-          <div>
-            <h1 className="text-2xl font-bold text-foreground">Create an account</h1>
-            <p className="text-muted-foreground mt-1">Get started with SkillBridge for free</p>
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <h1 className="text-2xl font-bold text-foreground">Create an account</h1>
+              <p className="text-muted-foreground mt-1">Get started with SkillBridge for free</p>
+            </div>
+            <Link to="/">
+              <Button variant="ghost" size="sm">Back to Home</Button>
+            </Link>
           </div>
 
           {/* Role toggle */}
@@ -78,9 +83,10 @@ const SignupPage = () => {
                 </button>
               </div>
             </div>
+            <Link to="/admin-dashboard">
             <Button type="submit" className="w-full gradient-primary text-primary-foreground border-0 hover:opacity-90">
-              <Link to="/admin-dashboard">Create Account</Link>
-            </Button>
+              Create Account
+            </Button></Link>
           </form>
 
           <p className="text-sm text-center text-muted-foreground">
