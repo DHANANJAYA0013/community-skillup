@@ -120,6 +120,52 @@ const ProfilePage = () => {
             <Card className="shadow-card">
               <CardHeader className="flex flex-row items-start justify-between space-y-0 pb-4">
                 <div>
+                  <CardTitle className="text-lg">Create a session</CardTitle>
+                  <CardDescription>Set up a new class slot for learners.</CardDescription>
+                </div>
+                <Button size="sm">Create session</Button>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="sessionTitle">Session title</Label>
+                    <Input id="sessionTitle" placeholder="e.g. Advanced TypeScript" className="bg-white" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="instructorName">Instructor name</Label>
+                    <Input id="instructorName" placeholder="Your name" className="bg-white" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="instructorId">Instructor ID</Label>
+                    <Input id="instructorId" placeholder="e.g. TCH-204" className="bg-white" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="sessionDate">Date</Label>
+                    <Input id="sessionDate" type="date" className="bg-white" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="startTime">Start time</Label>
+                    <Input id="startTime" type="time" className="bg-white" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="duration">Duration</Label>
+                    <Input id="duration" placeholder="e.g. 60 minutes" className="bg-white" />
+                  </div>
+                  <div className="sm:col-span-2 space-y-1.5">
+                    <Label htmlFor="description">Description</Label>
+                    <Textarea id="description" rows={3} placeholder="What will you cover?" className="bg-white" />
+                  </div>
+                  <div className="sm:col-span-2 space-y-1.5">
+                    <Label htmlFor="sessionLink">Session link / room ID</Label>
+                    <Input id="sessionLink" placeholder="Paste meeting link or room code" className="bg-white" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-card">
+              <CardHeader className="flex flex-row items-start justify-between space-y-0 pb-4">
+                <div>
                   <CardTitle className="text-lg">Change password</CardTitle>
                   <CardDescription>Secure your account with a new password.</CardDescription>
                 </div>

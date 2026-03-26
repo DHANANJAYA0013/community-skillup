@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import { skills, sessions, reviews } from "@/data/mockData";
 
 const teacherStats = [
-  { label: "Total Earnings", value: "$4,250", icon: DollarSign, color: "bg-secondary/10 text-secondary" },
+  { label: "Total Earnings", value: "₹4,250", icon: DollarSign, color: "bg-secondary/10 text-secondary" },
   { label: "Total Students", value: "48", icon: Users, color: "bg-primary/10 text-primary" },
   { label: "Active Skills", value: "6", icon: BookOpen, color: "bg-accent/10 text-accent" },
   { label: "Avg Rating", value: "4.8", icon: Star, color: "bg-accent/10 text-accent" },
@@ -76,7 +76,7 @@ const TeacherDashboardPage = () => {
                     <tr key={skill.id} className="hover:bg-muted/30 transition-colors">
                       <td className="px-6 py-4 text-sm font-medium text-foreground">{skill.title}</td>
                       <td className="px-6 py-4"><Badge variant="outline" className="text-xs">{skill.category}</Badge></td>
-                      <td className="px-6 py-4 text-sm text-foreground">${skill.price}/hr</td>
+                      <td className="px-6 py-4 text-sm text-foreground">₹{skill.price}/hr</td>
                       <td className="px-6 py-4 text-sm text-foreground">{skill.studentsEnrolled}</td>
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-1">
@@ -120,7 +120,7 @@ const TeacherDashboardPage = () => {
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="bg-card rounded-xl shadow-card border border-border/50 p-6">
               <h3 className="font-semibold text-foreground mb-4">Earnings This Month</h3>
-              <div className="text-4xl font-bold text-foreground mb-2">$1,850</div>
+              <div className="text-4xl font-bold text-foreground mb-2">₹1,850</div>
               <p className="text-sm text-secondary flex items-center gap-1"><TrendingUp className="w-4 h-4" /> +12% from last month</p>
             </div>
             <div className="bg-card rounded-xl shadow-card border border-border/50 p-6">

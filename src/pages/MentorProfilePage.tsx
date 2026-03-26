@@ -98,15 +98,17 @@ const MentorProfilePage = () => {
           <div className="space-y-6">
             <div className="bg-card rounded-xl shadow-card border border-border/50 p-6 sticky top-24">
               <div className="text-center mb-6">
-                <div className="text-3xl font-bold text-foreground">${mentor.pricePerSession}</div>
+                <div className="text-3xl font-bold text-foreground">₹{mentor.pricePerSession}</div>
                 <div className="text-sm text-muted-foreground">per session</div>
               </div>
               <Button className="w-full gradient-primary text-primary-foreground border-0 mb-3 hover:opacity-90">
                 Book Session
               </Button>
-              <Button variant="outline" className="w-full">
-                Send Message
-              </Button>
+              <Link to={`/chat/${mentor.id}`} className="w-full block">
+                <Button variant="outline" className="w-full">
+                  Send Message
+                </Button>
+              </Link>
 
               <div className="mt-6 pt-6 border-t border-border/50 space-y-3">
                 <div className="flex justify-between text-sm">
